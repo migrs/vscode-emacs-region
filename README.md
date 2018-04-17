@@ -1,10 +1,9 @@
-# VSCode Vimacs
-
-Provides Emacs keybindings for [VSCodeVim](https://github.com/VSCodeVim/Vim).
+<h2 align="center"><img src="https://raw.githubusercontent.com/migrs/vscode-vimacs/master/images/icon.png" height="128"><br>VSCode Vimacs</h2>
+<p align="center"><strong>Emacs keybindings for VSCodeVim</strong></p>
 
 ## Concepts
 
-- Mainly using VSCodeVim and can use Emacs like keybindings when in Vim insert mode (or vim disabled)
+- Mainly using [VSCodeVim](https://github.com/VSCodeVim/Vim), you can also use Emacs like keybindings in Vim insert mode (or vim disabled)
 - Avoid keybindings conflicts with other extensions as much as possible
 - Vim insert mode and Vim disabled status are almost the same
 - Supports Emacs region select keybindings (includes column region)
