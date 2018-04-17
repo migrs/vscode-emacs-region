@@ -21,7 +21,6 @@ Provides Emacs keybindings for [VSCodeVim](https://github.com/VSCodeVim/Vim).
 ## Required settings
 
 - `vim.useCtrlKeys`: `false`
-- `vim.useSystemClipboard`: `true`
 
 ## Vim ctrl keybindings
 
@@ -45,6 +44,8 @@ Provides Emacs keybindings for [VSCodeVim](https://github.com/VSCodeVim/Vim).
 | ctrl+shift+2  | normal | Vim    | `extension.vim_ctrl+shift+2`                |
 | ctrl+pageup   | normal | Vim    | `extension.vim_ctrl+pageup`                 |
 | ctrl+pagedown | normal | Vim    | `extension.vim_ctrl+pagedown`               |
+| ctrl+n        | normal | -      | Disabled                                    |
+| ctrl+h        | normal | -      | Disabled                                    |
 | ctrl+r        | normal | Vim    | `redo`                                      |
 | ctrl+w        | insert | Vim    | `extension.vim_ctrl+w`                      |
 | ctrl+[        | insert | Vim    | Exit insert mode                            |
@@ -58,9 +59,7 @@ Provides Emacs keybindings for [VSCodeVim](https://github.com/VSCodeVim/Vim).
 |---------------|--------|--------|---------------------------------------------|
 | ctrl+k        | normal | VSCode | VSCode ctrl+k commands                      |
 | ctrl+c        | normal | VSCode | `editor.action.clipboardCopyAction`         |
-| ctrl+h        | normal | VSCode | `editor.action.startFindReplaceAction`      |
 | ctrl+m        | normal | VSCode | `editor.action.toggleTabFocusMode`          |
-| ctrl+n        | normal | VSCode | `workbench.action.files.newUntitledFile`    |
 | ctrl+s        | normal | VSCode | `workbench.action.files.save`               |
 | ctrl+p        | normal | VSCode | `workbench.action.quickOpen`                |
 | ctrl+j        | -      | VSCode | `workbench.action.togglePanel`              |

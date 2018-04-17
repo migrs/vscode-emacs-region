@@ -19,8 +19,7 @@
 	],
 	"main": "./out/src/extension",
 	"contributes": {
-		"keybindings": [
-			{
+		"keybindings": [{
 				"key": "ctrl+f",
 				"command": "extension.vim_ctrl+f",
 				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
@@ -951,49 +950,119 @@
 				"when": "inQuickOpen"
 			},
 			{
-				"key": "ctrl+j",
-				"command": "",
-				"when": "terminalFocus"
-			},
-			{
-				"key": "ctrl+p",
-				"command": "",
-				"when": "terminalFocus"
-			},
-			{
 				"key": "ctrl+n",
 				"command": "",
-				"when": "terminalFocus"
+				"when": "editorTextFocus && vim.mode != 'Insert'"
 			},
 			{
-				"key": "ctrl+e",
+				"key": "ctrl+h",
 				"command": "",
-				"when": "terminalFocus"
-			},
-			{
-				"key": "ctrl+a",
-				"command": "",
-				"when": "terminalFocus"
+				"when": "editorTextFocus && vim.mode != 'Insert'"
 			},
 			{
 				"key": "ctrl+f",
 				"command": "",
-				"when": "terminalFocus"
+				"when": "!editorFocus"
 			},
 			{
 				"key": "ctrl+b",
 				"command": "",
-				"when": "terminalFocus"
+				"when": "!editorFocus"
 			},
 			{
-				"key": "ctrl+[",
+				"key": "ctrl+p",
 				"command": "",
-				"when": "terminalFocus"
+				"when": "!editorFocus"
 			},
 			{
-				"key": "ctrl+m",
+				"key": "ctrl+n",
 				"command": "",
-				"when": "terminalFocus"
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+a",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+e",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+h",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+d",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+k",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+u",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+w",
+				"command": "",
+				"when": "!editorFocus"
+			},
+			{
+				"key": "ctrl+f",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+b",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+p",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+n",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+a",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+e",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+h",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+d",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+k",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
+			},
+			{
+				"key": "ctrl+w",
+				"command": "",
+				"when": "editorFocus && findWidgetVisible"
 			}
 		]
 	},
