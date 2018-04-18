@@ -41,27 +41,27 @@ export function activate(context: vscode.ExtensionContext) {
     const disableVimActions: string[] = ["action.insertLineBefore", "action.insertLineAfter", "action.clipboardCutAction"];
     disableVimActions.forEach((insertLineAction) => {
         context.subscriptions.push(vscode.commands.registerCommand("emacs." + insertLineAction, () => {
-            vscode.commands.executeCommand("editor." + insertLineAction).then(exitRegionMode).then(vim.disableVim);
+            vscode.commands.executeCommand("editor." + insertLineAction).then(exitRegionMode);//.then(vim.disableVim);
         }));
     });
 }
 
-function startRegionMode() {
-    setRegionMode(RegionMode.RegionMode).then(removeSelection);
+async function startRegionMode() {
+    return await setRegionMode(RegionMode.RegionMode).then(removeSelection);
 }
 
 async function startColumnRegionMode() {
     await vim.disableVim()
-    setRegionMode(RegionMode.ColumnRegionMode).then(removeSelection);
+    return await setRegionMode(RegionMode.ColumnRegionMode).then(removeSelection);
 }
 
-function exitRegionMode() {
-    setRegionMode(RegionMode.None).then(removeSelection);
+async function exitRegionMode() {
+    return await setRegionMode(RegionMode.None).then(removeSelection);
 }
 
 async function setRegionMode(value: RegionMode) {
     await vscode.commands.executeCommand('setContext', 'inRegionMode', value != RegionMode.None)
-    await vscode.commands.executeCommand('setContext', 'inColumnRegionMode', value == RegionMode.ColumnRegionMode);
+    return await vscode.commands.executeCommand('setContext', 'inColumnRegionMode', value == RegionMode.ColumnRegionMode);
 }
 
 function removeSelection() {

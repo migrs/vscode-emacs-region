@@ -67,7 +67,6 @@
 | ctrl+z        | -      | VSCode | `undo`                                      |
 | ctrl+r        | insert | VSCode | `redo`                                      |
 | ctrl+d        | visual | VSCode | `editor.action.addSelectionToNextFindMatch` |
-| ctrl+x        | visual | VSCode | `editor.action.clipboardCutAction`          |
 
 ## Emacs ctrl-x commands
 
@@ -87,7 +86,7 @@
 | ctrl+x n      | -    | `workbench.action.files.newUntitledFile`     |
 | ctrl+x h      | -    | `editor.action.selectAll`                    |
 | ctrl+x u      | -    | `undo`                                       |
-| ctrl+x r      | -    | `undo`                                       |
+| ctrl+x r      | -    | `redo`                                       |
 
 ## Emacs keybindings
 
