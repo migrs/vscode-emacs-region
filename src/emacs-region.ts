@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('emacs.startColumnRegionMode', startColumnRegionMode));
     context.subscriptions.push(vscode.commands.registerCommand('emacs.exitRegionMode', exitRegionMode));
 
-    const selectionActions: string[] = ["action.clipboardCopyAction", "action.clipboardPasteAction", "action.clipboardCutAction"];
+    const selectionActions: string[] = ["action.clipboardCopyAction", "action.clipboardPasteAction"];
     selectionActions.forEach((selectionAction) => {
         context.subscriptions.push(vscode.commands.registerCommand("emacs." + selectionAction, () => {
             vscode.commands.executeCommand("editor." + selectionAction).then(exitRegionMode);
@@ -38,10 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
         }));
     });
 
-    const insertLineActions: string[] = ["action.insertLineBefore", "action.insertLineAfter"];
-    insertLineActions.forEach((insertLineAction) => {
+    const disableVimActions: string[] = ["action.insertLineBefore", "action.insertLineAfter", "action.clipboardCutAction"];
+    disableVimActions.forEach((insertLineAction) => {
         context.subscriptions.push(vscode.commands.registerCommand("emacs." + insertLineAction, () => {
-            vscode.commands.executeCommand("editor." + insertLineAction).then(vim.disableVim);
+            vscode.commands.executeCommand("editor." + insertLineAction).then(exitRegionMode).then(vim.disableVim);
         }));
     });
 }

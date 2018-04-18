@@ -65,9 +65,14 @@
 				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
 			},
 			{
+				"key": "ctrl+r",
+				"command": "extension.vim_ctrl+r",
+				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+			},
+			{
 				"key": "ctrl+x ctrl+x",
 				"command": "extension.vim_ctrl+x",
-				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+				"when": "editorTextFocus && !editorHasSelection && mode != 'Insert'"
 			},
 			{
 				"key": "ctrl+shift+2",
@@ -142,35 +147,42 @@
 			{
 				"key": "ctrl+x ctrl+f",
 				"command": "workbench.action.quickOpen",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x b",
 				"command": "workbench.action.showAllEditors",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x ctrl+b",
 				"command": "workbench.action.showAllEditors",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x ctrl+s",
 				"command": "workbench.action.files.save",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x ctrl+w",
 				"command": "workbench.action.files.saveAs",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x k",
-				"command": "workbench.action.closeActiveEditor"
+				"command": "workbench.action.closeActiveEditor",
+				"when": "!editorHasSelection"
 			},
 			{
-				"key": "ctrl+x ctrl-k",
-				"command": "workbench.action.closeAllEditors"
+				"key": "ctrl+x ctrl-c",
+				"command": "workbench.action.closeAllEditors",
+				"when": "!editorHasSelection"
+			},
+			{
+				"key": "ctrl+x n",
+				"command": "workbench.action.files.newUntitledFile",
+				"when": "!editorHasSelection"
 			},
 			{
 				"key": "ctrl+x k",
@@ -179,27 +191,48 @@
 			},
 			{
 				"key": "ctrl+x ctrl+n",
-				"command": "workbench.action.newWindow"
+				"command": "workbench.action.newWindow",
+				"when": "!editorHasSelection"
 			},
 			{
 				"key": "ctrl+x 1",
-				"command": "workbench.action.closeEditorsInOtherGroups"
+				"command": "workbench.action.closeEditorsInOtherGroups",
+				"when": "!editorHasSelection"
 			},
 			{
 				"key": "ctrl+x 2",
-				"command": "workbench.action.splitEditor"
+				"command": "workbench.action.splitEditor",
+				"when": "!editorHasSelection"
 			},
 			{
 				"key": "ctrl+x 3",
-				"command": "workbench.action.toggleEditorGroupLayout"
+				"command": "workbench.action.toggleEditorGroupLayout",
+				"when": "!editorHasSelection"
 			},
 			{
 				"key": "ctrl+x o",
-				"command": "workbench.action.navigateEditorGroups"
+				"command": "workbench.action.navigateEditorGroups",
+				"when": "!editorHasSelection"
+			},
+			{
+				"key": "ctrl+x h",
+				"command": "editor.action.selectAll",
+				"when": "editorTextFocus && !editorHasSelection"
 			},
 			{
 				"key": "ctrl+x u",
-				"command": "undo"
+				"command": "undo",
+				"when": "!editorHasSelection"
+			},
+			{
+				"key": "ctrl+x r",
+				"command": "redo",
+				"when": "!editorHasSelection"
+			},
+			{
+				"key": "ctrl+x",
+				"command": "emacs.action.clipboardCutAction",
+				"when": "editorTextFocus"
 			},
 			{
 				"key": "alt+w",
@@ -762,12 +795,12 @@
 			{
 				"key": "ctrl+x space",
 				"command": "emacs.startColumnRegionMode",
-				"when": "editorFocus && vim.mode == 'Insert'"
+				"when": "editorFocus && !editorHasSelection && vim.mode == 'Insert'"
 			},
 			{
 				"key": "ctrl+x space",
 				"command": "emacs.startColumnRegionMode",
-				"when": "editorFocus && !vim.active"
+				"when": "editorFocus && !editorHasSelection && !vim.active"
 			},
 			{
 				"key": "ctrl+g",
@@ -795,14 +828,24 @@
 				"when": "editorTextFocus && !inRegionMode"
 			},
 			{
-				"key": "ctrl+r",
+				"key": "ctrl+shift+/",
 				"command": "redo",
 				"when": "editorTextFocus && !inRegionMode"
 			},
 			{
+				"key": "ctrl+r",
+				"command": "redo",
+				"when": "editorTextFocus && !inRegionMode && vim.mode == 'Insert'"
+			},
+			{
+				"key": "ctrl+r",
+				"command": "redo",
+				"when": "editorTextFocus && !inRegionMode && !vim.active"
+			},
+			{
 				"key": "ctrl+x v",
 				"command": "toggleVim",
-				"when": "editorTextFocus && !inRegionMode && !editorReadonly"
+				"when": "editorTextFocus && !editorHasSelection && !inRegionMode && !editorReadonly"
 			},
 			{
 				"key": "ctrl+[",
@@ -970,16 +1013,6 @@
 				"when": "!editorFocus"
 			},
 			{
-				"key": "ctrl+p",
-				"command": "",
-				"when": "!editorFocus"
-			},
-			{
-				"key": "ctrl+n",
-				"command": "",
-				"when": "!editorFocus"
-			},
-			{
 				"key": "ctrl+a",
 				"command": "",
 				"when": "!editorFocus"
@@ -1021,11 +1054,6 @@
 			},
 			{
 				"key": "ctrl+b",
-				"command": "",
-				"when": "editorFocus && findWidgetVisible"
-			},
-			{
-				"key": "ctrl+p",
 				"command": "",
 				"when": "editorFocus && findWidgetVisible"
 			},

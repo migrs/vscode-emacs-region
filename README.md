@@ -28,12 +28,12 @@
 | ctrl+f        | normal | Vim    | `extension.vim_ctrl+f`                      |
 | ctrl+b        | normal | Vim    | `extension.vim_ctrl+b`                      |
 | ctrl+d        | normal | Vim    | `extension.vim_ctrl+d`                      |
-| ctrl+d        | visual | VSCode | `editor.action.addSelectionToNextFindMatch` |
 | ctrl+u        | normal | Vim    | `extension.vim_ctrl+u`                      |
 | ctrl+y        | normal | Vim    | `extension.vim_ctrl+y`                      |
 | ctrl+e        | normal | Vim    | `extension.vim_ctrl+e`                      |
 | ctrl+v        | normal | Vim    | `extension.vim_ctrl+v`                      |
 | ctrl+a        | normal | Vim    | `extension.vim_ctrl+a`                      |
+| ctrl+r        | normal | Vim    | `extension.vim_ctrl+r`                      |
 | ctrl+x ctrl+x | normal | Vim    | `extension.vim_ctrl+x`                      |
 | ctrl+w h      | normal | Vim    | `extension.vim_navigateLeft`                |
 | ctrl+w j      | normal | Vim    | `extension.vim_navigateDown`                |
@@ -45,7 +45,6 @@
 | ctrl+pagedown | normal | Vim    | `extension.vim_ctrl+pagedown`               |
 | ctrl+n        | normal | -      | Disabled                                    |
 | ctrl+h        | normal | -      | Disabled                                    |
-| ctrl+r        | normal | Vim    | `redo`                                      |
 | ctrl+w        | insert | Vim    | `extension.vim_ctrl+w`                      |
 | ctrl+[        | insert | Vim    | Exit insert mode                            |
 | ctrl+g        | -      | Emacs  | Exit each mode                              |
@@ -65,7 +64,10 @@
 | ctrl+o        | -      | VSCode | `workbench.action.files.openFile`           |
 | ctrl+t        | -      | VSCode | `workbench.action.showAllSymbols`           |
 | ctrl+i        | -      | VSCode | `expandLineSelection`                       |
-| ctrl+z        | -      | VSCode | `undo`                       |
+| ctrl+z        | -      | VSCode | `undo`                                      |
+| ctrl+r        | insert | VSCode | `redo`                                      |
+| ctrl+d        | visual | VSCode | `editor.action.addSelectionToNextFindMatch` |
+| ctrl+x        | visual | VSCode | `editor.action.clipboardCutAction`          |
 
 ## Emacs ctrl-x commands
 
@@ -76,14 +78,16 @@
 | ctrl+x ctrl+s | -    | `workbench.action.files.save`                |
 | ctrl+x ctrl+w | -    | `workbench.action.files.saveAs`              |
 | ctrl+x k      | -    | `workbench.action.closeActiveEditor`         |
-| ctrl+x ctrl-k | -    | `workbench.action.closeAllEditors`           |
-| ctrl+x k      | -    | `workbench.action.closeWindow`               |
+| ctrl+x ctrl-c | -    | `workbench.action.closeAllEditors`           |
 | ctrl+x ctrl+n | -    | `workbench.action.newWindow`                 |
 | ctrl+x 1      | -    | `workbench.action.closeEditorsInOtherGroups` |
 | ctrl+x 2      | -    | `workbench.action.splitEditor`               |
 | ctrl+x 3      | -    | `workbench.action.toggleEditorGroupLayout`   |
 | ctrl+x o      | -    | `workbench.action.navigateEditorGroups`      |
-| ctrl+x u      | -    | `workbench.action.navigateEditorGroups`      |
+| ctrl+x n      | -    | `workbench.action.files.newUntitledFile`     |
+| ctrl+x h      | -    | `editor.action.selectAll`                    |
+| ctrl+x u      | -    | `undo`                                       |
+| ctrl+x r      | -    | `undo`                                       |
 
 ## Emacs keybindings
 
