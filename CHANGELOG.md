@@ -4,6 +4,8 @@
 
 - Add icon
 - Separate vim and vscode undo/redo behaviors
+- Add increaseViewSize / decreaseViewSize bindings
+- Support ctrl+v paste when text selected
 
 ## [v1.0.0](https://github.com/migrs/vscode-vimacs/compare/90aa310...v1.0.0)
 

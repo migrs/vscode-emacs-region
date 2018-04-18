@@ -21,7 +21,12 @@
 
 - `vim.useCtrlKeys`: `false`
 
-## Vim ctrl keybindings
+## Normal mode (Vim)
+
+Blank mode means it is valid in all modes.  
+Blank type means it is not original keymap.
+
+### Vim ctrl keybindings
 
 | key           | mode   | type   | command                                     |
 |---------------|--------|--------|---------------------------------------------|
@@ -51,7 +56,7 @@
 | ctrl+x        | -      | Emacs  | Emacs ctrl+x commands                       |
 | ctrl+l        | -      | Emacs  | `emacs.scrollLineToCenter`                  |
 
-### VSCode ctrl keybindings (VSCode defaults)
+### VSCode ctrl keybindings
 
 | key           | mode   | type   | command                                     |
 |---------------|--------|--------|---------------------------------------------|
@@ -66,73 +71,83 @@
 | ctrl+i        | -      | VSCode | `expandLineSelection`                       |
 | ctrl+z        | -      | VSCode | `undo`                                      |
 | ctrl+r        | insert | VSCode | `redo`                                      |
+| ctrl+v        | visual | VSCode | `editor.action.clipboardPasteAction`        |
 | ctrl+d        | visual | VSCode | `editor.action.addSelectionToNextFindMatch` |
 
-## Emacs ctrl-x commands
+## Insert mode (Emacs)
 
-| key           | mode | command                                      |
-|---------------|------|----------------------------------------------|
-| ctrl+x ctrl+f | -    | `workbench.action.quickOpen`                 |
-| ctrl+x b      | -    | `workbench.action.showAllEditors`            |
-| ctrl+x ctrl+s | -    | `workbench.action.files.save`                |
-| ctrl+x ctrl+w | -    | `workbench.action.files.saveAs`              |
-| ctrl+x k      | -    | `workbench.action.closeActiveEditor`         |
-| ctrl+x ctrl-c | -    | `workbench.action.closeAllEditors`           |
-| ctrl+x ctrl+n | -    | `workbench.action.newWindow`                 |
-| ctrl+x 1      | -    | `workbench.action.closeEditorsInOtherGroups` |
-| ctrl+x 2      | -    | `workbench.action.splitEditor`               |
-| ctrl+x 3      | -    | `workbench.action.toggleEditorGroupLayout`   |
-| ctrl+x o      | -    | `workbench.action.navigateEditorGroups`      |
-| ctrl+x n      | -    | `workbench.action.files.newUntitledFile`     |
-| ctrl+x h      | -    | `editor.action.selectAll`                    |
-| ctrl+x u      | -    | `undo`                                       |
-| ctrl+x r      | -    | `redo`                                       |
+Blank mode means it is valid in all modes.  
+Blank type means it is not original keymap.
 
-## Emacs keybindings
+### Emacs ctrl-x commands
 
-| key              | mode   | command                                 |
-|------------------|--------|-----------------------------------------|
-| alt+w            | -      | `editor.action.clipboardCopyAction`     |
-| ctrl+w           | -      | `editor.action.clipboardCutAction`      |
-| ctrl+y           | -      | `editor.action.clipboardPasteAction`    |
-| ctrl+'           | -      | `editor.action.triggerSuggest`          |
-| ctrl+alt+'       | -      | `editor.action.triggerParameterHints`   |
-| ctrl+enter       | -      | `editor.action.insertLineAfter`         |
-| ctrl+shift+enter | -      | `editor.action.insertLineBefore`        |
-| ctrl+s           | insert | `editor.action.nextMatchFindAction`     |
-| ctrl+r           | insert | `editor.action.previousMatchFindAction` |
-| alt+;            | -      | `editor.action.commentLine`             |
-| alt+x            | -      | `workbench.action.showCommands`         |
-| ctrl+f           | insert | `cursorRight`                           |
-| ctrl+b           | insert | `cursorLeft`                            |
-| ctrl+p           | insert | `cursorUp`                              |
-| ctrl+n           | insert | `cursorDown`                            |
-| alt+f            | -      | `cursorWordRight`                       |
-| alt+b            | -      | `cursorWordLeft`                        |
-| ctrl+right       | insert | `cursorWordEndRight`                    |
-| ctrl+left        | insert | `cursorWordStartLeft`                   |
-| alt+v            | insert | `cursorPageUp`                          |
-| ctrl+v           | insert | `cursorPageDown`                        |
-| ctrl+a           | insert | `cursorHome`                            |
-| ctrl+e           | insert | `cursorEnd`                             |
-| shift+alt+,      | insert | `cursorTop`                             |
-| shift+alt+.      | insert | `cursorBottom`                          |
-| alt+f            | -      | `cursorWordRight`                       |
-| alt+b            | -      | `cursorWordLeft`                        |
-| ctrl+d           | insert | `deleteRight`                           |
-| ctrl+h           | insert | `deleteLeft`                            |
-| alt+d            | -      | `deleteWordRight`                       |
-| alt+h            | -      | `deleteWordLeft`                        |
+| key            | mode | type  | command                                      |
+|----------------|------|-------|----------------------------------------------|
+| ctrl+x ctrl+f  | -    | Emacs | `workbench.action.quickOpen`                 |
+| ctrl+x b       | -    | Emacs | `workbench.action.showAllEditors`            |
+| ctrl+x ctrl+s  | -    | Emacs | `workbench.action.files.save`                |
+| ctrl+x ctrl+w  | -    | Emacs | `workbench.action.files.saveAs`              |
+| ctrl+x k       | -    | Emacs | `workbench.action.closeActiveEditor`         |
+| ctrl+x ctrl-c  | -    | Emacs | `workbench.action.closeAllEditors`           |
+| ctrl+x ctrl+n  | -    | -     | `workbench.action.newWindow`                 |
+| ctrl+x 1       | -    | Emacs | `workbench.action.closeEditorsInOtherGroups` |
+| ctrl+x 2       | -    | Emacs | `workbench.action.splitEditor`               |
+| ctrl+x 3       | -    | Emacs | `workbench.action.toggleEditorGroupLayout`   |
+| ctrl+x o       | -    | Emacs | `workbench.action.navigateEditorGroups`      |
+| ctrl+x shift+] | -    | Emacs | `workbench.action.increaseViewSize`          |
+| ctrl+x shift+[ | -    | Emacs | `workbench.action.decreaseViewSize`          |
+| ctrl+x n       | -    | -     | `workbench.action.files.newUntitledFile`     |
+| ctrl+x h       | -    | Emacs | `editor.action.selectAll`                    |
+| ctrl+x u       | -    | Emacs | `undo`                                       |
+| ctrl+x r       | -    | -     | `redo`                                       |
+
+### Emacs keybindings
+
+| key              | mode   | type  | command                                 |
+|------------------|--------|-------|-----------------------------------------|
+| alt+w            | -      | Emacs | `editor.action.clipboardCopyAction`     |
+| ctrl+w           | insert | Emacs | `editor.action.clipboardCutAction`      |
+| ctrl+y           | insert | Emacs | `editor.action.clipboardPasteAction`    |
+| ctrl+'           | -      | -     | `editor.action.triggerSuggest`          |
+| ctrl+alt+'       | -      | -     | `editor.action.triggerParameterHints`   |
+| ctrl+enter       | -      | Emacs | `editor.action.insertLineAfter`         |
+| ctrl+shift+enter | -      | Emacs | `editor.action.insertLineBefore`        |
+| ctrl+s           | insert | Emacs | `editor.action.nextMatchFindAction`     |
+| ctrl+r           | insert | Emacs | `editor.action.previousMatchFindAction` |
+| alt+;            | -      | Emacs | `editor.action.commentLine`             |
+| alt+x            | -      | Emacs | `workbench.action.showCommands`         |
+| ctrl+f           | insert | Emacs | `cursorRight`                           |
+| ctrl+b           | insert | Emacs | `cursorLeft`                            |
+| ctrl+p           | insert | Emacs | `cursorUp`                              |
+| ctrl+n           | insert | Emacs | `cursorDown`                            |
+| alt+f            | -      | Emacs | `cursorWordRight`                       |
+| alt+b            | -      | Emacs | `cursorWordLeft`                        |
+| ctrl+right       | insert | Emacs | `cursorWordEndRight`                    |
+| ctrl+left        | insert | Emacs | `cursorWordStartLeft`                   |
+| alt+v            | insert | Emacs | `cursorPageUp`                          |
+| ctrl+v           | insert | Emacs | `cursorPageDown`                        |
+| ctrl+a           | insert | Emacs | `cursorHome`                            |
+| ctrl+e           | insert | Emacs | `cursorEnd`                             |
+| shift+alt+,      | insert | Emacs | `cursorTop`                             |
+| shift+alt+.      | insert | Emacs | `cursorBottom`                          |
+| alt+f            | -      | Emacs | `cursorWordRight`                       |
+| alt+b            | -      | Emacs | `cursorWordLeft`                        |
+| ctrl+d           | insert | Emacs | `deleteRight`                           |
+| ctrl+h           | insert | Emacs | `deleteLeft`                            |
+| alt+d            | -      | Emacs | `deleteWordRight`                       |
+| alt+h            | -      | Emacs | `deleteWordLeft`                        |
+| ctrl+/           | -      | Emacs | `undo`                                  |
+| ctrl+shift+/     | -      | Emacs | `redo`                                  |
 
 ### Commands implemeted by this extension
 
-| key              | mode   | command                                 |
-|------------------|--------|-----------------------------------------|
-| **ctrl+space**   | insert | `emacs.startRegionMode`                 |
-| **ctrl+x space** | insert | `emacs.startColumnRegionMode`           |
-| **ctrl+g**       | insert | `emacs.exitRegionMode`                  |
-| **ctrl+k**       | insert | `emacs.cutAllRight`                     |
-| **ctrl+l**       | -      | `emacs.scrollLineToCenter`              |
+| key              | mode   | type  | command                                 |
+|------------------|--------|-------|-----------------------------------------|
+| **ctrl+space**   | insert | Emacs | `emacs.startRegionMode`                 |
+| **ctrl+x space** | insert | -     | `emacs.startColumnRegionMode`           |
+| **ctrl+g**       | insert | Emacs | `emacs.exitRegionMode`                  |
+| **ctrl+k**       | insert | Emacs | `emacs.cutAllRight`                     |
+| **ctrl+l**       | -      | Emacs | `emacs.scrollLineToCenter`              |
 
 ## Compatibility With Other Extensions
 

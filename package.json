@@ -222,6 +222,14 @@
 				"command": "redo"
 			},
 			{
+				"key": "ctrl+x shift+]",
+				"command": "workbench.action.increaseViewSize"
+			},
+			{
+				"key": "ctrl+x shift+[",
+				"command": "workbench.action.decreaseViewSize"
+			},
+			{
 				"key": "alt+w",
 				"command": "emacs.action.clipboardCopyAction"
 			},
