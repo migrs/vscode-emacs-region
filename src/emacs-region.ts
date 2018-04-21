@@ -37,13 +37,6 @@ export function activate(context: vscode.ExtensionContext) {
             vscode.commands.executeCommand(deletionAction).then(exitRegionMode);
         }));
     });
-
-    const disableVimActions: string[] = ["action.insertLineBefore", "action.insertLineAfter"];
-    disableVimActions.forEach((insertLineAction) => {
-        context.subscriptions.push(vscode.commands.registerCommand("emacs." + insertLineAction, () => {
-            vscode.commands.executeCommand("editor." + insertLineAction).then(exitRegionMode).then(vim.disableVim);
-        }));
-    });
 }
 
 async function startRegionMode() {

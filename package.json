@@ -2,7 +2,7 @@
 	"name": "vimacs",
 	"displayName": "Vimacs",
 	"description": "Provides Emacs keybindings for VSCodeVim",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "migrs",
 	"engines": {
 		"vscode": "^1.0.0"
@@ -11,8 +11,13 @@
 		"type": "git",
 		"url": "https://github.com/migrs/vscode-vimacs"
 	},
+	"keywords": [
+		"vim",
+		"emacs",
+		"keymaps",
+		"keybindings"
+	],
 	"categories": [
-		"Keymaps",
 		"Extension Packs"
 	],
 	"icon": "images/icon.png",
@@ -74,7 +79,7 @@
 			{
 				"key": "ctrl+x ctrl+x",
 				"command": "extension.vim_ctrl+x",
-				"when": "editorTextFocus && mode != 'Insert' && vim.mode != 'Replace'"
+				"when": "editorTextFocus && vim.active && vim.mode != 'Insert' && vim.mode != 'Replace'"
 			},
 			{
 				"key": "ctrl+shift+2",
@@ -911,6 +916,15 @@
 				"key": "ctrl+n",
 				"command": "workbench.action.quickOpenNavigateNext",
 				"when": "inQuickOpen"
+			},
+			{
+				"key": "ctrl+p",
+				"command": "workbench.action.quickOpenNavigatePrevious",
+				"when": "!editorFocus && !inQuickOpen"
+			}, {
+				"key": "ctrl+n",
+				"command": "workbench.action.quickOpenNavigateNext",
+				"when": "!editorFocus && !inQuickOpen"
 			},
 			{
 				"key": "ctrl+g",

@@ -1,10 +1,18 @@
 'use strict';
 
 import * as vscode from 'vscode';
+import * as vim from './vim'
 
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('emacs.cutAllRight', cutAllRight));
     context.subscriptions.push(vscode.commands.registerCommand('emacs.scrollLineToCenter', scrollLineToCenter));
+
+    const insertLineActions: string[] = ["action.insertLineBefore", "action.insertLineAfter"];
+    insertLineActions.forEach((insertLineAction) => {
+        context.subscriptions.push(vscode.commands.registerCommand("emacs." + insertLineAction, () => {
+            vscode.commands.executeCommand("editor." + insertLineAction).then(vim.disableVim);
+        }));
+    });
 }
 
 async function cutAllRight() {

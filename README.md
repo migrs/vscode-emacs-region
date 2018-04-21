@@ -9,7 +9,6 @@
 - Supports Emacs region select keybindings (includes column region)
 - Since Vim insert mode and mlti-cursors are incompatible, Vim disabled when column region mode.
 - Respect the default keybindings of VSCode
-- Using system clipboard
 
 ## Related extensions
 
@@ -90,13 +89,13 @@ Blank type means it is not original keymap.
 | ctrl+x k       | -    | Emacs | `workbench.action.closeActiveEditor`         |
 | ctrl+x ctrl-c  | -    | Emacs | `workbench.action.closeAllEditors`           |
 | ctrl+x ctrl+n  | -    | -     | `workbench.action.newWindow`                 |
+| ctrl+x n       | -    | -     | `workbench.action.files.newUntitledFile`     |
 | ctrl+x 1       | -    | Emacs | `workbench.action.closeEditorsInOtherGroups` |
 | ctrl+x 2       | -    | Emacs | `workbench.action.splitEditor`               |
 | ctrl+x 3       | -    | Emacs | `workbench.action.toggleEditorGroupLayout`   |
 | ctrl+x o       | -    | Emacs | `workbench.action.navigateEditorGroups`      |
 | ctrl+x shift+] | -    | Emacs | `workbench.action.increaseViewSize`          |
 | ctrl+x shift+[ | -    | Emacs | `workbench.action.decreaseViewSize`          |
-| ctrl+x n       | -    | -     | `workbench.action.files.newUntitledFile`     |
 | ctrl+x h       | -    | Emacs | `editor.action.selectAll`                    |
 | ctrl+x u       | -    | Emacs | `undo`                                       |
 | ctrl+x r       | -    | -     | `redo`                                       |
