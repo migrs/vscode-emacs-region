@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.0.2](https://github.com/migrs/vscode-vimacs/compare/v1.0.1...v1.0.2)
+
+- Fix keymap alart
+
 ## [v1.0.1](https://github.com/migrs/vscode-vimacs/compare/v1.0.0...v1.0.1)
 
 - Add icon
