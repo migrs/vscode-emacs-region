@@ -2,7 +2,7 @@
 	"name": "vimacs",
 	"displayName": "Vimacs",
 	"description": "Provides Emacs keybindings for VSCodeVim",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "migrs",
 	"engines": {
 		"vscode": "^1.0.0"

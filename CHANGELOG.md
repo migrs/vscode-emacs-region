@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.0.3](https://github.com/migrs/vscode-vimacs/compare/v1.0.2...v1.0.3)
+
+- Fix ctrl+n / ctrl+h didn't work when vim disabled
+
 ## [v1.0.2](https://github.com/migrs/vscode-vimacs/compare/v1.0.1...v1.0.2)
 
 - Fix keymap alart
