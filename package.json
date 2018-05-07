@@ -999,12 +999,12 @@
 			{
 				"key": "ctrl+n",
 				"command": "",
-				"when": "editorTextFocus && vim.mode != 'Insert'"
+				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
 			},
 			{
 				"key": "ctrl+h",
 				"command": "",
-				"when": "editorTextFocus && vim.mode != 'Insert'"
+				"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
 			},
 			{
 				"key": "ctrl+f",
