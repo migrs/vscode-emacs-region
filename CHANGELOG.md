@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.1.0](https://github.com/migrs/vscode-vimacs/compare/v1.0.3...v1.1.0)
+
+- Simplified settings (Insert mode keybindings only)
+
 ## [v1.0.3](https://github.com/migrs/vscode-vimacs/compare/v1.0.2...v1.0.3)
 
 - Fix ctrl+n / ctrl+h didn't work when vim disabled
