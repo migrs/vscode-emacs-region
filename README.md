@@ -3,8 +3,8 @@
 
 ## Concepts
 
-- Mainly using [VSCodeVim](https://github.com/VSCodeVim/Vim), you can also use Emacs like keybindings in Vim insert mode
-- Supports Emacs region select keybindings
+- Mainly using [VSCodeVim](https://github.com/VSCodeVim/Vim), you can also use Emacs like key bindings in Vim insert mode
+- Supports Emacs region select key bindings
 
 ## Related extensions
 
@@ -12,11 +12,9 @@
 - [vscode-emacs-region](https://github.com/ayrtonmassey/vscode-emacs-region) - provides region selection similar to that of Emacs
 - [DDCODE](https://github.com/dotDeeka/ddcode) - provides some Emacs commands
 
-### Required settigns
+### Required settings
 
-Some VSCodeVim keybindings needs to be disabled.
-
-keybindingsjson
+In order for VSCode Vimacs to work properly, some VSCodeVim key bindings must be disabled. Add these to your `keybindings.json` file:
 
 ```json
 {
@@ -33,7 +31,7 @@ keybindingsjson
     "key": "ctrl+w",
     "command": "-extension.vim_ctrl+w",
     "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-},
+}
 ```
 
 ### Emacs keybindings
@@ -67,7 +65,7 @@ keybindingsjson
 
 It is possible to combine this extension with other cursor movement extensions.
 
-You can use the `inRegionMode` context flag in the `when` clause of your keybind to provide different behaviour for region mode vs. cursor mode. The default keybinds are laid out as follows:
+You can use the `inRegionMode` context flag in the `when` clause of your `keybindings.json` to provide different behaviours for region mode and cursor mode. The default key bindings are laid out as follows:
 
 ```json
 {
