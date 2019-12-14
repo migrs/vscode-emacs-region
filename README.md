@@ -12,28 +12,6 @@
 - [vscode-emacs-region](https://github.com/ayrtonmassey/vscode-emacs-region) - provides region selection similar to that of Emacs
 - [DDCODE](https://github.com/dotDeeka/ddcode) - provides some Emacs commands
 
-### Required settings
-
-In order for VSCode Vimacs to work properly, some VSCodeVim key bindings must be disabled. Add these to your `keybindings.json` file:
-
-```json
-{
-    "key": "ctrl+f",
-    "command": "-extension.vim_ctrl+f",
-    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
-},
-{
-    "key": "ctrl+n",
-    "command": "-extension.vim_ctrl+n",
-    "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl"
-},
-{
-    "key": "ctrl+w",
-    "command": "-extension.vim_ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-}
-```
-
 ### Emacs keybindings
 
 | key    | command                                 |
@@ -60,6 +38,28 @@ In order for VSCode Vimacs to work properly, some VSCodeVim key bindings must be
 | **ctrl+k**       | `emacs.cutAllRight`           |
 | **ctrl+l**       | `emacs.scrollLineToCenter`    |
 
+## My settings.json
+
+```json
+    "vim.useCtrlKeys": false,
+    "vim.overrideCopy": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.visualstar": true,
+    "vim.handleKeys": {
+        "<C-f>": true,
+        "<C-b>": true,
+        "<C-u>": true,
+        "<C-r>": true,
+        "<C-v>": true,
+        "<C-[>": true,
+        "<C-w>": true,
+    },
+    "vim.cursorStylePerMode.normal" : "block",
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.cursorStylePerMode.replace": "block-outline",
+    "vim.statusBarColorControl": true,
+```
 ## Compatibility With Other Extensions
 
 It is possible to combine this extension with other cursor movement extensions.
