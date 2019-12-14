@@ -56,7 +56,6 @@ In order for VSCode Vimacs to work properly, some VSCodeVim key bindings must be
 | alt+d  | `deleteWordRight`                       |
 | alt+h  | `deleteWordLeft`                        |
 | **ctrl+space**   | `emacs.startRegionMode`       |
-| **ctrl+x space** | `emacs.startColumnRegionMode` |
 | **ctrl+g**       | `emacs.exitRegionMode`        |
 | **ctrl+k**       | `emacs.cutAllRight`           |
 | **ctrl+l**       | `emacs.scrollLineToCenter`    |
